@@ -1,0 +1,301 @@
+$primary-yellow: hsla(33, 96%, 54%, 1);
+$primary-blue: hsla(234, 62%, 42%, 1);
+
+$background-yellow: hsla(22, 96%, 54%, .1);
+
+
+$font-family: 'Roboto';
+$font-grey: hsla(0, 0%, 48%, 1);
+$font-dark-grey: hsla(0, 0%, 20%, 1);
+
+
+$navigation-height: 49px;
+$navigation__button-width: 93px;
+
+$navigation__button--center-border: 1px solid hsla(0, 0%, 87%, 1);
+
+$border-radius: 10px;
+
+body, html{
+    margin: 0;
+    padding: 0;
+    min-width: 360px;
+    max-width: 576px;
+}
+
+.header{
+    background-color: $primary-yellow;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__content{
+        display: flex;
+        justify-content: start;
+    }
+
+    &__logo{
+        margin-left: 18px;
+    }
+
+    &__logout{
+        margin-right: 20px;
+        margin-left: auto;
+    }
+
+}
+
+.navigation{
+    height: $navigation-height;
+    border-bottom: 1px solid hsla(0, 0%, 87%, 1);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+   
+    &__content{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: $navigation-height;
+        justify-content: center;
+    }
+
+    &__button{
+        min-width: $navigation__button-width;
+        display: grid;
+        justify-items: center;
+        align-items: flex-end;
+        grid-template-areas: 
+        "navigation__icon"
+        "navigation__text";
+        background: white;
+        border: none;
+
+        &--center{
+            border-right: $navigation__button--center-border;
+            border-left: $navigation__button--center-border;
+        }
+    }
+
+    &__button--active{
+        background: $primary-blue;        
+    }
+
+    &__text{
+        color: $font-grey;
+        font-family: $font-family;
+        font-size: 11px;
+        text-align: center;
+        line-height: 16.5px;
+        font-weight: 400;
+        margin-bottom: 3px;
+
+        &--active{
+            color: white;
+            font-weight: 500;
+        }
+
+    }
+
+}
+
+.user{
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: auto auto 20px auto;
+    grid-template-areas: 
+    "avatar label-name label-buddy label-buddy"
+    "avatar user-name user-icon buddy-name";
+    column-gap: 6px;
+    align-items: flex-start;
+
+    &__avatar{
+        grid-area: avatar;
+        margin-left: auto;
+        margin-right: 4px;
+    }
+
+    &__label{
+
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19.5px;
+        color: $font-grey;
+        margin-top: auto;
+
+        &--name{
+            grid-area: label-name;
+        }
+
+        &--buddy{
+            grid-area: label-buddy;
+        }
+
+    }
+
+    &__icon{
+        grid-area: user-icon;
+        size: 20px;
+    }
+
+    &__name{
+
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22.1px;
+        color: $primary-blue;
+
+        &--name{
+            grid-area: user-name;
+        }
+
+        &--buddy{
+            grid-area: buddy-name;
+        }
+
+    }
+
+}
+
+.cta{
+
+    display: grid;
+    justify-content: center;
+    background-image: url("../assets/dessin feuille.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    &__content{
+        width: 278px;
+        margin-top: 23px;
+        background: $primary-blue;
+        border-radius: $border-radius;
+        display: grid;
+        grid-template-areas: "close close" "icon text";
+        column-gap: 10px;
+        row-gap: 7px;
+    }
+
+    &__text{
+        color: white;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19.5px;
+        grid-area: text;
+        margin: 0 10px 14px 0;
+    }
+
+    &__close{
+        width: 9px;
+        height: 9px;
+        position: relative;
+        grid-area: close;
+        margin: 8px 10px 0 auto;
+    }
+
+    &__close::after, &__close::before{
+        content: " ";
+        position: absolute;
+        background: white;
+        height: 10px;
+        width: 2px;
+        left: 50%;
+    }
+
+    &__close::after{
+        transform: rotate(-45deg);
+    }
+
+    &__close::before{
+        transform: rotate(45deg);
+    }
+
+    &__icon{
+        grid-area: icon;
+        margin-left: 10px;
+    }
+
+}
+
+.mood{
+
+    display: grid;
+    justify-content: center;
+    background-color: $background-yellow;
+    margin-top: 10px;
+    padding: 25px 0;
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    background-image: url("../assets/Group.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 15px;
+
+    &__title{
+        font-family: $font-family;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 0 8px 5px;
+    }
+
+    &__rating{
+        background-color: $primary-yellow;
+        border-radius: $border-radius;
+        width: 275px;
+        display: grid;
+        grid-template-areas: "label" "content";
+        justify-content: center;
+        row-gap: 9px;
+    }
+
+    &__label{
+        font-family: $font-family;
+        color: white;
+        grid-area: label;
+        text-align: center;
+        margin-top: 9px;
+    }
+
+    &__content{
+        grid-area: content;
+        background-color: white;
+        border-radius: $border-radius;
+        width: 261px;
+        margin-bottom: 7px;
+        display: grid;
+        grid-template-areas: "label" "text" "mood";
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    &__contentLabel{
+        font-family: $font-family;
+        font-weight: 400;
+        color: $font-dark-grey;
+        font-size: 14px;
+        line-height: 150%;
+        grid-area: label;
+    }
+
+    &__text{
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 12px;
+        color: $font-grey;
+        list-style: 120%;
+        grid-area: text;
+        margin: 0;
+    }
+
+    &__icons{
+        grid-area: mood;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content: space-between;
+        margin-top: 14px;
+    }
+
+}

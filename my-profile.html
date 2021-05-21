@@ -10,13 +10,75 @@
         <title>Mijn profiel</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="css/my-profile.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="header">
+            <div class="header__content">
+                <img src="assets/white.svg" alt="ATK Logo" class="header__logo">
+                <img src="assets/Group 438.svg" alt="Afmelden" class="header__logout">
+            </div>
+        </div>
         
-        
+        <nav class="navigation">
+            <div class="navigation__content">
+                <button class="navigation__button navigation__button--active">
+                    <img src="assets/mijn profiel.svg" alt="Mijn profiel" class="navigation__icon">
+                    <span class="navigation__text navigation__text--active">Mijn profiel</span>
+                </button>
+                <button class="navigation__button navigation__button--center">
+                    <img src="assets/duo profiel.svg" alt="Mijn buddyschap" class="navigation__icon">
+                    <span class="navigation__text">Mijn buddyschap</span>
+                </button>
+                <button class="navigation__button">
+                    <img src="assets/tips.svg" alt="Tips en news" class="navigation__icon">
+                    <span class="navigation__text">Tips & news</span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="user">
+            <img src="assets/Group 500.svg" alt="Gebruiker avatar" class="user__avatar">
+
+            <label class="user__label user__label--name">Naam</label>
+            <label class="user__label user__label--buddy">Mijn buddy</label>
+            
+            <span class="user__name user__name--name">Rick</span>
+            <img src="assets/Group 355.svg" alt="Gebruiker icoon" class="user__icon">
+            <span class="user__name user__name--buddy">Malaika</span>
+        </section>
+
+        <section class="cta">
+            <div class="cta__content">
+                <div class="cta__close"></div>
+                <img src="assets/tips-white.svg" alt="Gloeilamp icoon" class="cta__icon">
+                <p class="cta__text">Tijd voor je volgende afspraak bij ArmenTeKort. Plan je volgende afspraak met ArmenTeKort in Persoonlijke uitnodiging. </p>
+            </div>
+        </section>
+
+        <section class="mood">
+            <h3 class="mood__title">Hoe gaat het met jou?</h3>
+
+            <div class="mood__rating">
+                <span class="mood__label">+ Mijn humeur</span>
+                <div class="mood__content">
+                    <span class="mood__contentLabel">Deel hoe je je voelt met ArmenTeKort</span>
+                    <p class="mood__text">Deze informatie wordt enkel gedeeld met ATK, het is niet zichtbaar voor je buddy.</p>
+                    <div class="mood__icons">
+                        <img src="assets/+1.svg" alt="Slecht humeur">
+                        <img src="assets/+2.svg" alt="Eerder slecht humeur">
+                        <img src="assets/+3.svg" alt="Normaal humeur">
+                        <img src="assets/+4.svg" alt="Eerder goed humeur">
+                        <img src="assets/+5.svg" alt="Uitstekend humeur">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </body>
 </html>
