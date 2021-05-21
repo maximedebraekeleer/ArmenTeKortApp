@@ -1,0 +1,21 @@
+<svg width="37" height="26" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M18.1562 25.199C25.3689 25.199 31.2159 19.558 31.2159 12.5995C31.2159 5.64099 25.3689 0 18.1562 0C10.9436 0 5.09654 5.64099 5.09654 12.5995C5.09654 19.558 10.9436 25.199 18.1562 25.199Z" fill="#FFC909"/>
+<g opacity="0.61">
+<rect x="0.0287628" y="4.21249" width="21.0919" height="20.3486" fill="url(#pattern0)"/>
+</g>
+<g opacity="0.61">
+<rect x="14.9343" y="4.21249" width="21.0919" height="20.3486" fill="url(#pattern1)"/>
+</g>
+<path d="M11.3074 11.2259C11.3074 11.2259 12.8784 9.61537 14.5968 11.2259" stroke="#444444" stroke-width="1.84489" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.7157 11.2259C21.7157 11.2259 23.2868 9.61537 25.0051 11.2259" stroke="#444444" stroke-width="1.84489" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.2533 14.8494C14.2533 14.8494 15.0634 16.7678 18.1074 16.7678C21.1513 16.7678 21.8878 14.8494 21.8878 14.8494" stroke="#444444" stroke-width="1.84489" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<image id="image0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWsAAAFrCAYAAAAXRqh4AAAACXBIWXMAAC4jAAAuIwF4pT92AAAA"/>
+</defs>
+</svg>
