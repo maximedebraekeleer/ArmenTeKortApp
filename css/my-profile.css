@@ -342,6 +342,48 @@ body, html {
   margin-top: 14px;
 }
 
+.mood__icons--closing {
+  -webkit-animation: closing 2s;
+          animation: closing 2s;
+}
+
+.mood__shared {
+  background-color: #a4d129;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 13px;
+  text-align: center;
+  display: none;
+}
+
+.mood__sharedText {
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  line-height: 140%;
+}
+
+@-webkit-keyframes closing {
+  0% {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+  100% {
+    -webkit-clip-path: inset(0 100% 0 100%);
+            clip-path: inset(0 100% 0 100%);
+  }
+}
+
+@keyframes closing {
+  0% {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+  100% {
+    -webkit-clip-path: inset(0 100% 0 100%);
+            clip-path: inset(0 100% 0 100%);
+  }
+}
+
 .appointments {
   display: -ms-grid;
   display: grid;

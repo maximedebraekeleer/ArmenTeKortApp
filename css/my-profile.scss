@@ -297,8 +297,32 @@ body, html{
         grid-template-columns: auto auto auto auto auto;
         justify-content: space-between;
         margin-top: 14px;
+        &--closing{
+            animation: closing 2s;
+        }
     }
 
+    &__shared{
+        // display: none;
+        background-color: hsla(76, 67%, 49%, 1);
+        border-radius: $border-radius;
+        margin-top: 5px;
+        padding: 13px;
+        text-align: center;
+        display: none;
+    }
+
+    &__sharedText{
+        font-family: $font-family;
+        color: $font-dark-grey;
+        line-height: 140%;
+    }
+
+}
+
+@keyframes closing {
+   0% {clip-path: inset(0 0 0 0)};
+   100% {clip-path: inset(0 100% 0 100%)};
 }
 
 .appointments{
