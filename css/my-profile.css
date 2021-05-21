@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 body, html {
   margin: 0;
   padding: 0;
@@ -81,11 +82,10 @@ body, html {
 
 .navigation__text {
   color: #7a7a7a;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 11px;
   text-align: center;
-  line-height: 16.5px;
-  font-weight: 400;
+  line-height: 150%;
   margin-bottom: 3px;
 }
 
@@ -118,10 +118,9 @@ body, html {
 }
 
 .user__label {
-  font-family: "Roboto";
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
-  line-height: 19.5px;
+  line-height: 150%;
   color: #7a7a7a;
   margin-top: auto;
 }
@@ -147,10 +146,10 @@ body, html {
 }
 
 .user__name {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 17px;
-  line-height: 22.1px;
+  line-height: 130%;
   color: #2936ae;
 }
 
@@ -178,7 +177,7 @@ body, html {
 }
 
 .cta__content {
-  width: 278px;
+  width: 280px;
   margin-top: 23px;
   background: #2936ae;
   border-radius: 10px;
@@ -192,12 +191,12 @@ body, html {
 
 .cta__text {
   color: white;
-  font-family: "Roboto";
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
-  line-height: 19.5px;
-  -ms-grid-row: 2;
+  line-height: 150%;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: text;
   margin: 0 10px 14px 0;
 }
@@ -233,7 +232,7 @@ body, html {
 }
 
 .cta__icon {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: icon;
   margin-left: 10px;
@@ -248,8 +247,8 @@ body, html {
   background-color: rgba(250, 108, 25, 0.1);
   margin-top: 10px;
   padding: 25px 0;
-  -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
-          clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+  -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+          clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
   background-image: url("../assets/Group.svg");
   background-repeat: no-repeat;
   background-position-x: right;
@@ -257,18 +256,18 @@ body, html {
 }
 
 .mood__title {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 130%;
   margin: 0 0 8px 5px;
 }
 
 .mood__rating {
   background-color: #fa9519;
   border-radius: 10px;
-  width: 275px;
+  width: 280px;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "label" "content";
@@ -279,7 +278,7 @@ body, html {
 }
 
 .mood__label {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   color: white;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -290,11 +289,11 @@ body, html {
 
 .mood__content {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: content;
   background-color: white;
   border-radius: 10px;
-  width: 261px;
+  width: 266px;
   margin-bottom: 7px;
   display: -ms-grid;
   display: grid;
@@ -308,8 +307,7 @@ body, html {
 }
 
 .mood__contentLabel {
-  font-family: "Roboto";
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   color: #333333;
   font-size: 14px;
   line-height: 150%;
@@ -319,13 +317,13 @@ body, html {
 }
 
 .mood__text {
-  font-family: "Roboto";
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #7a7a7a;
   list-style: 120%;
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: text;
   margin: 0;
 }
@@ -342,5 +340,221 @@ body, html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 14px;
+}
+
+.appointments {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0 30px 0;
+}
+
+.appointments__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 130%;
+  margin: 0;
+}
+
+.appointments__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 150%;
+  color: #7a7a7a;
+}
+
+.appointments__appointment {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "icon heading" ". content";
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  -ms-grid-rows: 30px auto;
+      grid-template-rows: 30px auto;
+}
+
+.appointments__iconWrapper {
+  height: 37px;
+  width: 37px;
+  background-color: #7a7a7a;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  position: relative;
+  overflow: visible;
+}
+
+.appointments__iconWrapper--planned {
+  background-color: #fa9519;
+}
+
+.appointments__iconWrapper--planned::after {
+  height: 300% !important;
+  background: #fa9519 !important;
+}
+
+.appointments__iconWrapper::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 3px;
+  height: 200%;
+  background: linear-gradient(182.41deg, #7a7a7a -3%, #fa941b 37%);
+}
+
+.appointments__heading {
+  background-color: rgba(122, 122, 122, 0.9);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: 5px 5px 0 0;
+  padding: 4px 4px 4px 14px;
+  background-image: url("../assets/meeting-bg.svg");
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 4px 4px 12px rgba(196, 196, 196, 0.4);
+          box-shadow: 4px 4px 12px rgba(196, 196, 196, 0.4);
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: heading;
+  max-height: 30px;
+}
+
+.appointments__button {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: #fa9519;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px #fa9519;
+  padding: 5px;
+}
+
+.appointments__content {
+  padding: 10px;
+  border: none;
+  border: solid 1px rgba(122, 122, 122, 0.1);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 4px 4px 12px rgba(196, 196, 196, 0.4);
+          box-shadow: 4px 4px 12px rgba(196, 196, 196, 0.4);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 95%;
+      grid-template-columns: 95%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+}
+
+.appointments__content--planned {
+  -ms-grid-columns: 10px auto;
+      grid-template-columns: 10px auto;
+      grid-template-areas: "text text" "map location";
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px 10px 15px;
+}
+
+.appointments__text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text;
+  font-family: "Roboto", sans-serif;
+  color: #7a7a7a;
+  font-size: 10px;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.appointments__date {
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  line-height: 130%;
+}
+
+.appointments__location {
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  font-size: 10px;
+  line-height: 150%;
+  text-decoration: underline;
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: location;
+}
+
+.appointments__locationIcon {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: map;
+}
+
+.milestones {
+  -webkit-clip-path: polygon(0 12%, 100% 0%, 100% 88%, 0% 100%);
+          clip-path: polygon(0 12%, 100% 0%, 100% 88%, 0% 100%);
+  background-color: rgba(250, 108, 25, 0.1);
+  padding: 36px 0 47px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 25px;
+  margin-bottom: 10px;
+}
+
+.milestones__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 130%;
+  margin: 0;
+}
+
+.milestones__button {
+  background-color: #2936ae;
+  border-radius: 5px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  line-height: 130%;
+  width: 280px;
+  padding: 10px 0;
+  border-color: #2936ae;
 }
 /*# sourceMappingURL=my-profile.css.map */

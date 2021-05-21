@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
 $primary-yellow: hsla(33, 96%, 54%, 1);
 $primary-blue: hsla(234, 62%, 42%, 1);
 
 $background-yellow: hsla(22, 96%, 54%, .1);
 
 
-$font-family: 'Roboto';
+$font-family: 'Roboto', sans-serif;
+
 $font-grey: hsla(0, 0%, 48%, 1);
 $font-dark-grey: hsla(0, 0%, 20%, 1);
 
+$container-width: 280px;
 
 $navigation-height: 49px;
 $navigation__button-width: 93px;
 
 $navigation__button--center-border: 1px solid hsla(0, 0%, 87%, 1);
 
+$border-radius-small: 5px;
 $border-radius: 10px;
 
 body, html{
@@ -84,8 +90,7 @@ body, html{
         font-family: $font-family;
         font-size: 11px;
         text-align: center;
-        line-height: 16.5px;
-        font-weight: 400;
+        line-height: 150%;
         margin-bottom: 3px;
 
         &--active{
@@ -116,9 +121,8 @@ body, html{
     &__label{
 
         font-family: $font-family;
-        font-weight: 400;
         font-size: 13px;
-        line-height: 19.5px;
+        line-height: 150%;
         color: $font-grey;
         margin-top: auto;
 
@@ -142,7 +146,7 @@ body, html{
         font-family: $font-family;
         font-weight: 500;
         font-size: 17px;
-        line-height: 22.1px;
+        line-height: 130%;
         color: $primary-blue;
 
         &--name{
@@ -166,7 +170,7 @@ body, html{
     background-position-x: right;
 
     &__content{
-        width: 278px;
+        width: $container-width;
         margin-top: 23px;
         background: $primary-blue;
         border-radius: $border-radius;
@@ -179,9 +183,8 @@ body, html{
     &__text{
         color: white;
         font-family: $font-family;
-        font-weight: 400;
         font-size: 13px;
-        line-height: 19.5px;
+        line-height: 150%;
         grid-area: text;
         margin: 0 10px 14px 0;
     }
@@ -225,7 +228,7 @@ body, html{
     background-color: $background-yellow;
     margin-top: 10px;
     padding: 25px 0;
-    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
     background-image: url("../assets/Group.svg");
     background-repeat: no-repeat;
     background-position-x: right;
@@ -236,14 +239,14 @@ body, html{
         font-weight: 500;
         font-style: normal;
         font-size: 20px;
-        line-height: 26px;
+        line-height: 130%;
         margin: 0 0 8px 5px;
     }
 
     &__rating{
         background-color: $primary-yellow;
         border-radius: $border-radius;
-        width: 275px;
+        width: $container-width;
         display: grid;
         grid-template-areas: "label" "content";
         justify-content: center;
@@ -262,7 +265,7 @@ body, html{
         grid-area: content;
         background-color: white;
         border-radius: $border-radius;
-        width: 261px;
+        width: ($container-width*.95);
         margin-bottom: 7px;
         display: grid;
         grid-template-areas: "label" "text" "mood";
@@ -273,7 +276,6 @@ body, html{
 
     &__contentLabel{
         font-family: $font-family;
-        font-weight: 400;
         color: $font-dark-grey;
         font-size: 14px;
         line-height: 150%;
@@ -282,7 +284,6 @@ body, html{
 
     &__text{
         font-family: $font-family;
-        font-weight: 400;
         font-size: 12px;
         color: $font-grey;
         list-style: 120%;
@@ -298,4 +299,178 @@ body, html{
         margin-top: 14px;
     }
 
+}
+
+.appointments{
+
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 10px 0 30px 0;
+
+    &__title{
+        font-family: $font-family;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0;
+    }
+
+    &__label{
+        font-family: $font-family;
+        font-size: 13px;
+        line-height: 150%;
+        color: $font-grey;
+    }
+
+    &__appointment{
+        margin-top: 20px;
+        display: grid;
+        grid-template-areas: "icon heading" ". content";
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 30px auto;
+    }
+
+    &__iconWrapper{
+        height: 37px;
+        width: 37px;
+        background-color: $font-grey;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        grid-area: icon;
+        position: relative;
+        &--planned{
+            background-color: $primary-yellow;
+            &::after{
+                height: 300% !important;
+                background: $primary-yellow !important;
+            }
+        }
+        overflow: visible;
+
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 200%;
+            background: linear-gradient(182.41deg, rgb(122, 122, 122) -3%, rgb(250, 148, 27) 37%);
+        }
+    }
+
+
+    &__heading{
+        background-color: hsla(0, 0%, 48%, .9);
+        color: white;
+        font-family: $font-family;
+        font-weight: 500;
+        border-radius: $border-radius-small $border-radius-small 0 0;
+        padding: 4px 4px 4px 14px;
+        background-image: url("../assets/meeting-bg.svg");
+        box-sizing: border-box;
+        box-shadow: 4px 4px 12px rgba(196, 196, 196, 0.4);
+        grid-area: heading;
+        max-height: 30px;
+    }
+
+    &__button{
+        font-family: $font-family;
+        color: white;
+        background-color: $primary-yellow;
+        width: 100%;
+        border-radius: $border-radius-small;
+        border: solid 1px $primary-yellow;
+        padding: 5px;
+    }
+
+    &__content{
+        padding: 10px;
+        border: none;
+        border: solid 1px hsla(0, 0%, 48%, .1);
+        border-bottom-right-radius: $border-radius-small;
+        border-bottom-left-radius: $border-radius-small;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 12px rgba(196, 196, 196, 0.4);
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 95%;
+        grid-area: content;
+        &--planned{
+            grid-template-columns: 10px auto;
+            grid-template-areas: "text text" "map location";
+            justify-content: start;
+            align-items: center;
+            padding: 0 10px 10px 15px;
+        }
+    }
+
+    &__text{
+        grid-area: text;
+        font-family: $font-family;
+        color: $font-grey;
+        font-size: 10px;
+        line-height: 150%;
+        font-weight: 300;
+    }
+
+    &__date{
+        color: $font-dark-grey;
+        font-family: $font-family;
+        font-size: 17px;
+        line-height: 130%;
+    }
+
+    &__location{
+        font-family: $font-family;
+        color: $font-dark-grey;
+        font-size: 10px;
+        line-height: 150%;
+        text-decoration: underline;
+        position: relative;
+        grid-area: location;
+    }
+
+    &__locationIcon{
+        grid-area: map;
+    }
+
+}
+
+.milestones{
+
+    clip-path: polygon(0 12%, 100% 0%, 100% 88%, 0% 100%);
+    background-color: $background-yellow;
+    padding: 36px 0 47px 0;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    row-gap: 25px;
+    margin-bottom: 10px;
+
+    &__title{
+        font-family: $font-family;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0;
+
+    }
+
+    &__button{
+        background-color: $primary-blue;
+        border-radius: $border-radius-small;
+        color: white;
+        font-family: $font-family;
+        font-size: 17px;
+        line-height: 130%;
+        width: $container-width;
+        padding: 10px 0;
+        border-color: $primary-blue;
+    }
 }
